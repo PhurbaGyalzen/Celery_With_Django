@@ -11,6 +11,7 @@ def send_feedback_email_task(email_address, message):
         subject='FeedBack',
         message=f'{message}',
         from_email=settings.EMAIL_HOST_USER,
-        recipient_list=[email_address,]
+        recipient_list=[email_address,],
+        fail_silently=False,
     )
 
